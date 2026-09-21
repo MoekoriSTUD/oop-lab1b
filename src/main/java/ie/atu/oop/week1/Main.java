@@ -17,6 +17,9 @@ public class Main {
         System.out.println("First Book PageCount: " + firstBook.pageCount);
         System.out.println("First Book Available? " + firstBook.available);
         System.out.println("\n");
+        firstBook.borrowBook();
+        firstBook.displayDetails();
+        System.out.println("\n");
 
         Book secondBook = new Book();
 
