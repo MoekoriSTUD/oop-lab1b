@@ -7,6 +7,18 @@ public class Book {
     public boolean available = true;
 
     public Book(String title, String author, int pageCount) {
+        if (title == null || title.isEmpty()) {
+            throw new IllegalArgumentException("Title cannot be empty or null");
+        }
+
+        if (author == null || author.isBlank()) {
+            throw new IllegalArgumentException("Author cannot be empty or null");
+        }
+
+        if (pageCount < 1) {
+            throw new IllegalArgumentException("Page count cannot be zero or negative");
+        }
+
         this.title = title;
         this.author = author;
         this.pageCount = pageCount;
