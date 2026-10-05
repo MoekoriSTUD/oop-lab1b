@@ -43,3 +43,39 @@ The results of a successful loan, a rejected loan, a rejected return and the Mav
 
 Your debugger observations and any material AI assistance.
    Everything runs as it is supposed to without any material AI assistance.
+
+
+LAB 4 ===============================================================================
+Lab 4 changes LibraryService from working with a single supplied Book to owning a
+List<Book>.
+
+• Explain what List<Book> tells the compiler.
+
+
+• Explain why final does not prevent books.add(...).
+
+• Explain what the enhanced for loop variable represents.
+
+• Describe what findBookByTitle returns for a known and an unknown title.
+
+
+• Explain why removeBook reuses findBookByTitle instead of writing another search loop.
+    There's no point in writing another search loop if we can just use method.
+    It simply saves time and is more efficient.
+
+• Explain which responsibilities belong to Main, LibraryService and Book.
+    - Main
+        is used for creating objects, calling LibraryService and printing results.
+    - LibraryService
+        used to hold the List, find Books and check loan rules.
+    - Book
+        protects variables with 'final', validates borrowing and returning.
+
+• Record BUILD SUCCESS, the final count and any material AI assistance used.
+    [INFO] Building jar: C:\Users\VladyslavSkubak-STUD\IdeaProjects\oop-lab1b\target\book-tracker-1.0-SNAPSHOT.jar
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    [INFO] Total time:  2.431 s
+    [INFO] Finished at: 2026-10-05T13:34:34+01:00
+    [INFO] ------------------------------------------------------------------------
