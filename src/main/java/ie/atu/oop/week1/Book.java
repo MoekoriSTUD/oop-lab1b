@@ -54,11 +54,6 @@ public class Book {
         status = BookStatus.AVAILABLE;
     }
 
-    public enum BookStatus {
-        AVAILABLE,
-        ON_LOAN
-    }
-
 //    public void displayDetails() {
 //        System.out.println("Book: " + title);
 //        System.out.println("Book Author: " + author);
