@@ -50,14 +50,20 @@ Lab 4 changes LibraryService from working with a single supplied Book to owning 
 List<Book>.
 
 • Explain what List<Book> tells the compiler.
-
+   It tells the compiler that the list can only contain elements of type Book or its subclasses.
 
 • Explain why final does not prevent books.add(...).
+   When final applied to an object reference, it means that the reference variable cannot be reassigned to point to a different ArrayList object. But as long as variable books    continues to reference the same list, the contents of the ArrayList can be added, removed or modified.
 
 • Explain what the enhanced for loop variable represents.
+   As in the code:
+      for (Book book : books) {
+       // ...
+      }
+   The loop variable book represents a reference to the current element being iterated over in the books list during each iteration.
 
 • Describe what findBookByTitle returns for a known and an unknown title.
-
+   For a known title it returns a direct reference to the matching Book object whose title matches the search. For an unknown it returns null.
 
 • Explain why removeBook reuses findBookByTitle instead of writing another search loop.
     There's no point in writing another search loop if we can just use method.
