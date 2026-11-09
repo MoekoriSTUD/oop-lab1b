@@ -85,3 +85,35 @@ List<Book>.
     [INFO] Total time:  2.431 s
     [INFO] Finished at: 2026-10-05T13:34:34+01:00
     [INFO] ------------------------------------------------------------------------
+
+
+Lab 5 ===========================================================================================================
+
+• Briefly explain the difference between the throw statement inside Book and the catch block used by the caller.
+    If I understood correctly, the throw statement changes a message of an error and catch, on the other hand, catches 
+    any errors and does whatever is placed inside curly brackets.
+
+• Record what Path.of(...) does and name one Path method and one Files method used in the lab.
+    Path.of(...) essentially creates a path to a file specified in arguments.
+    Files.createDirectories(file.getParent()); -- both Path method and Files method that were used in the lab.
+
+• State that Lab 5 adds exception handling and CSV persistence to the Library application.
+    Lab 5 add exception handling and CSV persistence to the Library application. It was done using try-catch construct
+    and 2 newly discovered libraries: Path and Files (Path is used to create and use paths to a file, and Files is used
+    to actually create and manipulate a file that was pointed at by Path).
+
+• Explain the difference between unchecked NumberFormatException and checked IOException.
+    Unchecked NumberFormatException does not require a try-catch construct to run, checked IOException requires
+    try-catch construct in order to even be compiled.
+
+• Explain the difference between Path and Files.
+    Path is used to create and use paths to a file, and Files is used
+    to actually create and manipulate a file that was pointed at by Path
+
+• Explain how ON_LOAN is restored without adding setStatus().
+    It is restored basically by re-borrowing a book if its availability is confirmed by .csv file. And if it is ON_LOAN
+    it just uses borrowBook() method to restore a status. If it is available, it does nothing because book status is
+    AVAILABLE by default.
+
+• Record any material AI assistance used.
+    None
